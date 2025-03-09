@@ -69,7 +69,14 @@ def count_winning_states(board):
 
 
 def main():
-    board = ['X', 'O', '-1', 'X', '-1', '-1', '-1', 'O', '-1']
+    BoardInput = input("Enter the board state: ")
+    board = BoardInput.split()
+    # print(len(board))
+    if len(board) != 9:
+        print("INVALID INPUT")
+        return
+
+    
     result = count_winning_states(board)
     print(result)
 
